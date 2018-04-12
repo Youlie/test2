@@ -1,0 +1,22 @@
+body{
+    background-image:url(../img/tiger.jpg);
+}
+div{
+    background-color:azure;
+    max-width: 200px;
+    float: left;
+    border: solid 2px rgb(77, 42, 38);
+    padding:20px;
+    margin: 10px;
+}
+p {
+    border: solid 1px rgb(129, 18, 18);
+}
+h1{
+    font-weight: normal;
+    color: rgb(224, 102, 31);
+}
+img{
+    max-width: 180px;
+}
+

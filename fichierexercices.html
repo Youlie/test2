@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercices</title>
+</head>
+<body>
+    <input type="text" id="entree" placeholder="entrez ici le nom du nouvel élément"/>
+    <button id="miseajour">Go!</button>
+    <hr/>
+    <div id="resultat">
+        <h1>la liste de courses</h1>
+        <ul id='list'></ul>
+        <p>&#x26;</p>
+    </div>
+
+    <script>
+    // function AjoutProduit(){
+    //     var contenu = document.getElementById('entree').value;
+    //     console.log(contenu);
+    //     var newLi = document.createElement("li");
+    //     console.log(contenu);
+    //     newLi.innerText = newElemnt;
+    //     document.getElementById('list').appendChild(newLi);
+    //     document.getElementById('list').innerHTML+="<li> "+ contenu +" </li>";
+    // }
+    // document.getElementById("miseajour").addEventListener("click",AjoutProduit);
+
+     document.getElementById("miseajour") // fonction annonyme : du coup une deuxième façon d'écrire
+         .addEventListener(
+             "click",
+             function(){
+                 var nouvelElement = document.getElementById('entree').value;
+                 var nouveauLi = document.createElement('li');
+                 nouveauLi.innerText = nouvelElement;
+                 var nouveauBouton = document.createElement('bouton');
+                 nouveauBouton.className = ' removebtn';
+                 nouveauBouton.innerText = ' supprimer';
+
+                 nouveauLi.appendChild(nouveauBouton);
+                 nouveauBouton.addEventListener('click', function(){
+                     // debugger;
+                     document.getElementById('list').removeChild(nouveauLi);
+                 });
+                 document.getElementById('list').appendChild(nouveauLi);
+                
+             }
+             );
+
+    
+    
+    </script>
+</body>
+</html>

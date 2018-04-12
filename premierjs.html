@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>premierJS</title>
+
+</head>
+<body>
+    <div id="resultat"> ici se trouvera le résultat</div>
+    <img src=FIFA.png id="foot" style="max-width:140px">
+    <button id="lebouton">En Avant !</button>
+    <script>
+            function changeTexte(){
+                document.getElementById("resultat").innerHTML += "<br/>"+ 
+                document.getElementById("resultat").innerHTML;
+            }
+            function changeImage(){
+                document.getElementById("foot").style.maxWidth="200px";
+            }
+            function changeImage1(){
+                document.getElementById("foot").style.maxWidth="140px";
+            }
+            document.getElementById("lebouton").addEventListener("click",changeTexte);
+            document.getElementById("foot").addEventListener("mouseenter",changeImage);
+            document.getElementById("foot").addEventListener("mouseleave",changeImage1);
+
+        </script>
+</body>
+</html>
